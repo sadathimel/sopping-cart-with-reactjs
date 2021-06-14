@@ -1,0 +1,11 @@
+.shop{
+    display: flex;
+    justify-content: space-around;
+}
+.course-container{
+    width: 70%;
+    border-right: 1px solid lightgray;
+}
+.cart-container{
+    /* width: 30%; */
+}
