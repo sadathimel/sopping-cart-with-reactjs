@@ -1,4 +1,5 @@
 import React from 'react';
+import {Button} from 'react-bootstrap';
 
 const Cart = ({cart}) => {
     const courseTotal = cart.reduce((sum,course) => sum + course.price, 0);
@@ -10,7 +11,7 @@ const Cart = ({cart}) => {
             <p>Price: {courseTotal}</p>
             <p>Tax: {tax}</p>
             <p>Grand Total: {courseTotal + tax}</p>
-            <button>Place Oder{}</button>
+            <Button variant="success">Place Oder</Button>
         </div>
     );
 };
