@@ -1,6 +1,7 @@
 .course{
     display: flex;
     border-bottom: 1px solid lightgray;
+    padding: 20px 0px;
 }
 .course img {
     width: 150px;
