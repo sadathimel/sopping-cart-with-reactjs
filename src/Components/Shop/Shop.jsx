@@ -6,17 +6,22 @@ import './Shop.css'
 
 const Shop = () => {
   const [courses, setCourses] = useState(courseData);
-  const [cart, srtCart] = useCart(0);
+  const [cart, setCart] = useState([]);
+
+  const handleButton = ((course) => {
+      const newCart = [...cart,course];
+      setCart(newCart);
+  });
 
   return (
     <div className="shop">
       <div className="course-container">
         {courses.map((course) => (
-          <Course course={course}></Course>
+          <Course course={course} handleButton = {handleButton}></Course>
         ))}
       </div>
       <div className="cart-container">
-        <Cart></Cart>
+        <Cart cart={cart}></Cart>
       </div>
     </div>
   );
